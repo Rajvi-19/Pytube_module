@@ -11,4 +11,4 @@ def Download(url):
 		print('Successfully Downloaded...')
 #Calling the Func	
 link=input('Enter the Link: ')
-Download(link)
+#Download(link)

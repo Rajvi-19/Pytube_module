@@ -20,7 +20,7 @@ def Song_downloader(url):
 			a=urlunparse(c)
 			break
 	link=yt(a)
-	res=link.streams.get_highest_resolution()
+	res=link.streams.filter(only_audio=True).first()
 	os.system('cls')#cls-for pcs clear-for phones
 	print('Wait..',end='\r')
 	res.download()

@@ -23,9 +23,11 @@ def Song_downloader(url):
 	res=link.streams.filter(only_audio=True).first()
 	os.system('cls')#cls-for pcs clear-for phones
 	print('Wait..',end='\r')
-	res.download()
-	print('Downloaded Successfully...')			
-		
+	audio=res.download()
+	name,ext=os.path.splitext(audio)
+        new_file=name+'.mp3'
+        os.rename(audio,new_file)
+	print('Downloaded Successfully...')
 
 name=input("Enter Song Name: ")
 #Song_finder(name)
